@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Canvas</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	
+	<style type="text/css">
+		#sketch{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container text-center">
+		
+		<div class="form-group">
+
+			<div class="btn-group">
+				<a href="javascript:simpleCanvas.setColor('#FFFFFF');" class="btn btn-primary"><i class="fa fa-circle" style="color:#FFFFFF;"></i></a>
+				<a href="javascript:simpleCanvas.setColor('#000000');" class="btn btn-primary"><i class="fa fa-circle" style="color:#000000;"></i></a>
+				<a href="javascript:simpleCanvas.setRadius(1);" class="btn btn-primary"><i class="fa fa-paint-brush"></i> +</a>
+				<a href="javascript:simpleCanvas.setRadius(0);" class="btn btn-primary"><i class="fa fa-paint-brush"></i> -</a>
+				<a href="javascript:simpleCanvas.undo();" class="btn btn-primary"><i class="fa fa-undo"></i></a>
+			</div>
+
+		</div>
+
+		<canvas id="sketch"></canvas>
+
+	</div>
+
+	<script type="text/javascript" src="simplecanvas.js"></script>
+
+	<script type="text/javascript">
+		simpleCanvas.init('sketch');
+		simpleCanvas.setSize(800, 600);
+	</script>
+</body>
+</html>
